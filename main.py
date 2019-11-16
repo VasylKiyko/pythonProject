@@ -5,6 +5,7 @@ from PyQt5.QtWidgets import QApplication, QMainWindow
 from login import Ui_LoginWindow
 from registration import Ui_RegisterWindow
 from dialog import Ui_Dialog
+import Client as cl
 
 
 class LoginWindow(QMainWindow, Ui_LoginWindow):
@@ -12,7 +13,19 @@ class LoginWindow(QMainWindow, Ui_LoginWindow):
         QMainWindow.__init__(self)
         self.setupUi(self)
 
+        self.client = cl.Client()
+
+        self.btnSingIn.clicked.connect(self.log_in)
         self.btnSingUp.clicked.connect(self.openRegisterForm)
+
+    def __del__(self):
+        self.client.__del__()
+
+    def log_in(self):
+        login = self.leLogin.text()
+        password = self.lePassword.text()
+        log_in_data = [login, password]
+        self.client.log_in(log_in_data)
 
     def openRegisterForm(self):
         self.regWin = RegisterWindow()
@@ -40,9 +53,14 @@ class DialogWindow(QtWidgets.QDialog, Ui_Dialog):
         self.btnOK.clicked.connect(self.onClickOK)
 
     def onClickOK(self):
-        self.label.clear()
-        self.hide()
         logWin.regWin.close()
+        logWin.show()
+        self.close()
+
+    def closeEvent(self, QCloseEvent):
+        logWin.regWin.close()
+        logWin.show()
+        self.close()
 
 
 if __name__ == '__main__':
