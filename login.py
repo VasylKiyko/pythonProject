@@ -6,10 +6,8 @@
 #
 # WARNING! All changes made in this file will be lost!
 
-import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow
+
 from PyQt5 import QtCore, QtGui, QtWidgets
-from registration import Ui_RegisterWindow
 
 
 class Ui_LoginWindow(object):
@@ -39,9 +37,6 @@ class Ui_LoginWindow(object):
         font.setWeight(75)
         self.btnSingUp.setFont(font)
         self.btnSingUp.setObjectName("btnSingUp")
-
-        self.btnSingUp.clicked.connect(self.openRegisterForm)
-
         self.leLogin = QtWidgets.QLineEdit(self.centralwidget)
         self.leLogin.setGeometry(QtCore.QRect(140, 125, 200, 22))
         font = QtGui.QFont()
@@ -61,8 +56,7 @@ class Ui_LoginWindow(object):
         self.lePassword.setFont(font)
         self.lePassword.setToolTip("")
         self.lePassword.setWhatsThis("")
-        self.lePassword.setInputMethodHints(
-            QtCore.Qt.ImhHiddenText | QtCore.Qt.ImhNoAutoUppercase | QtCore.Qt.ImhNoPredictiveText | QtCore.Qt.ImhSensitiveData)
+        self.lePassword.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhNoAutoUppercase|QtCore.Qt.ImhNoPredictiveText|QtCore.Qt.ImhSensitiveData)
         self.lePassword.setText("")
         self.lePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lePassword.setObjectName("lePassword")
@@ -91,26 +85,10 @@ class Ui_LoginWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
-    def openRegisterForm(self):
-        self.window = QtWidgets.QMainWindow()
-        self.ui = Ui_RegisterWindow()
-        self.ui.setupUi(self.window)
-        main.hide()
-        self.window.show()
-
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "Log in"))
-        self.btnSingIn.setText(_translate("MainWindow", "SING IN"))
-        self.btnSingUp.setText(_translate("MainWindow", "SING UP"))
+        self.btnSingIn.setText(_translate("MainWindow", "SIGN IN"))
+        self.btnSingUp.setText(_translate("MainWindow", "SIGN UP"))
         self.label.setText(_translate("MainWindow", "Login"))
         self.label_2.setText(_translate("MainWindow", "Password"))
-
-
-if __name__ == '__main__':
-    app = QApplication(sys.argv)
-    main = QMainWindow()
-    ui = Ui_LoginWindow()
-    ui.setupUi(main)
-    main.show()
-    sys.exit(app.exec_())
