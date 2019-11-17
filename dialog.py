@@ -16,17 +16,12 @@ class Ui_Dialog(object):
         Dialog.resize(230, 80)
         Dialog.setMinimumSize(QtCore.QSize(230, 80))
         Dialog.setMaximumSize(QtCore.QSize(230, 80))
+        self.btnDialogOK = QtWidgets.QPushButton(Dialog)
+        self.btnDialogOK.setGeometry(QtCore.QRect(80, 40, 70, 20))
+        self.btnDialogOK.setObjectName("btnDialogOK")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(50, 20, 130, 40))
-        self.label.setMinimumSize(QtCore.QSize(130, 40))
-        self.label.setMaximumSize(QtCore.QSize(130, 40))
-        font = QtGui.QFont()
-        font.setPointSize(10)
-        self.label.setFont(font)
+        self.label.setGeometry(QtCore.QRect(60, 20, 111, 16))
         self.label.setObjectName("label")
-        self.btnOK = QtWidgets.QPushButton(Dialog)
-        self.btnOK.setGeometry(QtCore.QRect(80, 50, 70, 20))
-        self.btnOK.setObjectName("pushButton")
 
         self.retranslateUi(Dialog)
         QtCore.QMetaObject.connectSlotsByName(Dialog)
@@ -34,5 +29,5 @@ class Ui_Dialog(object):
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
         Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        self.btnDialogOK.setText(_translate("Dialog", "ОК"))
         self.label.setText(_translate("Dialog", "Registration successful"))
-        self.btnOK.setText(_translate("Dialog", "ОК"))

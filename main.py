@@ -13,19 +13,19 @@ class LoginWindow(QMainWindow, Ui_LoginWindow):
         QMainWindow.__init__(self)
         self.setupUi(self)
 
-        self.client = cl.Client()
+        #self.client = cl.Client()
 
-        self.btnSingIn.clicked.connect(self.log_in)
-        self.btnSingUp.clicked.connect(self.openRegisterForm)
+        #self.btnSingInLog.clicked.connect(self.log_in)
+        self.btnSingUpLog.clicked.connect(self.openRegisterForm)
 
-    def __del__(self):
-        self.client.__del__()
+    #def __del__(self):
+        #self.client.__del__()
 
-    def log_in(self):
-        login = self.leLogin.text()
-        password = self.lePassword.text()
-        log_in_data = [login, password]
-        self.client.log_in(log_in_data)
+    #def log_in(self):
+        #login = self.leLogin.text()
+        #password = self.lePassword.text()
+        #log_in_data = [login, password]
+        #self.client.log_in(log_in_data)
 
     def openRegisterForm(self):
         self.regWin = RegisterWindow()
@@ -50,7 +50,7 @@ class DialogWindow(QtWidgets.QDialog, Ui_Dialog):
         QtWidgets.QDialog.__init__(self)
         self.setupUi(self)
 
-        self.btnOK.clicked.connect(self.onClickOK)
+        self.btnDialogOK.clicked.connect(self.onClickOK)
 
     def onClickOK(self):
         logWin.regWin.close()
