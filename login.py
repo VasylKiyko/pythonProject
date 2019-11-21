@@ -11,84 +11,123 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_LoginWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(480, 380)
-        MainWindow.setMinimumSize(QtCore.QSize(480, 380))
-        MainWindow.setMaximumSize(QtCore.QSize(480, 380))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi(self, Ui_Login):
+        Ui_Login.setObjectName("Ui_Login")
+        Ui_Login.resize(480, 380)
+        Ui_Login.setMinimumSize(QtCore.QSize(480, 380))
+        Ui_Login.setMaximumSize(QtCore.QSize(480, 380))
+        Ui_Login.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.centralwidget = QtWidgets.QWidget(Ui_Login)
         self.centralwidget.setMaximumSize(QtCore.QSize(540, 540))
         self.centralwidget.setObjectName("centralwidget")
         self.btnSingIn = QtWidgets.QPushButton(self.centralwidget)
-        self.btnSingIn.setGeometry(QtCore.QRect(190, 210, 100, 40))
+        self.btnSingIn.setGeometry(QtCore.QRect(190, 189, 100, 40))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(11)
         font.setBold(True)
-        font.setWeight(75)
+        font.setUnderline(False)
+        font.setWeight(87)
+        font.setStrikeOut(False)
         self.btnSingIn.setFont(font)
+        self.btnSingIn.setStyleSheet("QPushButton {\n"
+"  font-weight: 700;\n"
+"  color: white;\n"
+"  text-decoration: none;\n"
+"  padding: .2em 1em calc(.2em + 3px);\n"
+"  border-radius: .900em;\n"
+"  background: rgb(64,199,129);\n"
+"  box-shadow: 0 -3px rgb(53,167,110) inset;\n"
+"  transition: 0.2s;\n"
+"} \n"
+"QPushButton:hover { background: rgb(53, 167, 110); }\n"
+"QPushButton:pressed {\n"
+"  background: rgb(33,147,90);\n"
+"  box-shadow: 0 3px rgb(33,147,90) inset;\n"
+"}")
         self.btnSingIn.setObjectName("btnSingIn")
         self.btnSingUpLog = QtWidgets.QPushButton(self.centralwidget)
-        self.btnSingUpLog.setGeometry(QtCore.QRect(190, 260, 100, 40))
+        self.btnSingUpLog.setGeometry(QtCore.QRect(190, 239, 100, 40))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(11)
         font.setBold(True)
-        font.setWeight(75)
+        font.setUnderline(False)
+        font.setWeight(87)
+        font.setStrikeOut(False)
         self.btnSingUpLog.setFont(font)
+        self.btnSingUpLog.setStyleSheet("QPushButton {\n"
+"  font-weight: 700;\n"
+"  color: white;\n"
+"  text-decoration: none;\n"
+"  padding: .2em 1em calc(.2em + 3px);\n"
+"  border-radius: .900em;\n"
+" background: rgb(64,199,129);\n"
+"  box-shadow: 0 -3px rgb(53,167,110) inset;\n"
+"  transition: 0.2s;\n"
+"} \n"
+"QPushButton:hover { background: rgb(53, 167, 110); }\n"
+"QPushButton:pressed {\n"
+"  background: rgb(33,147,90);\n"
+"  box-shadow: 0 3px rgb(33,147,90) inset;\n"
+"}")
         self.btnSingUpLog.setObjectName("btnSingUpLog")
         self.leLogin = QtWidgets.QLineEdit(self.centralwidget)
-        self.leLogin.setGeometry(QtCore.QRect(140, 125, 200, 22))
+        self.leLogin.setGeometry(QtCore.QRect(140, 104, 200, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leLogin.setFont(font)
         self.leLogin.setToolTip("")
         self.leLogin.setWhatsThis("")
+        self.leLogin.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leLogin.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leLogin.setText("")
         self.leLogin.setObjectName("leLogin")
         self.lePassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.lePassword.setGeometry(QtCore.QRect(140, 170, 200, 22))
+        self.lePassword.setGeometry(QtCore.QRect(140, 140, 200, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.lePassword.setFont(font)
         self.lePassword.setToolTip("")
         self.lePassword.setWhatsThis("")
+        self.lePassword.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.lePassword.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhNoAutoUppercase|QtCore.Qt.ImhNoPredictiveText|QtCore.Qt.ImhSensitiveData)
         self.lePassword.setText("")
         self.lePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lePassword.setObjectName("lePassword")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(140, 105, 45, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(140, 155, 47, 13))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        MainWindow.setCentralWidget(self.centralwidget)
+        Ui_Login.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Ui_Login)
+        QtCore.QMetaObject.connectSlotsByName(Ui_Login)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Ui_Login):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Log in"))
-        self.btnSingIn.setText(_translate("MainWindow", "SIGN IN"))
-        self.btnSingUpLog.setText(_translate("MainWindow", "SIGN UP"))
-        self.label.setText(_translate("MainWindow", "Login"))
-        self.label_2.setText(_translate("MainWindow", "Password"))
+        Ui_Login.setWindowTitle(_translate("Ui_Login", "miniOSBB - Log in"))
+        self.btnSingIn.setText(_translate("Ui_Login", "SIGN IN"))
+        self.btnSingUpLog.setText(_translate("Ui_Login", "SIGN UP"))
+        self.leLogin.setPlaceholderText(_translate("Ui_Login", "Login"))
+        self.lePassword.setPlaceholderText(_translate("Ui_Login", "Password"))

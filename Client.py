@@ -2,7 +2,7 @@ import socket
 import pickle
 BUFFER = 4096
 IP = "127.0.0.1"
-PORT = 4578
+PORT = 4579
 
 
 class Client:

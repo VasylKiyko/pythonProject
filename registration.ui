@@ -23,7 +23,10 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Registration</string>
+   <string>miniOSBB - Registration</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(238, 238, 238);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="maximumSize">
@@ -45,13 +48,27 @@
      <font>
       <family>Times New Roman</family>
       <pointsize>11</pointsize>
-      <weight>75</weight>
+      <weight>87</weight>
       <bold>true</bold>
+      <underline>false</underline>
+      <strikeout>false</strikeout>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">btnSingUp{
- rgb(85, 255, 0)
+     <string notr="true">QPushButton {
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  padding: .2em 1em calc(.2em + 3px);
+  border-radius: .900em;
+  background: rgb(64,199,129);
+  box-shadow: 0 -3px rgb(53,167,110) inset;
+  transition: 0.2s;
+} 
+QPushButton:hover { background: rgb(53, 167, 110); }
+QPushButton:pressed {
+  background: rgb(33,147,90);
+  box-shadow: 0 3px rgb(33,147,90) inset;
 }</string>
     </property>
     <property name="text">
@@ -62,9 +79,9 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>100</y>
+      <y>91</y>
       <width>130</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -78,6 +95,20 @@
     </property>
     <property name="whatsThis">
      <string/>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhNone</set>
@@ -85,14 +116,17 @@
     <property name="text">
      <string/>
     </property>
+    <property name="placeholderText">
+     <string>Name</string>
+    </property>
    </widget>
    <widget class="QLineEdit" name="leSurname">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>100</y>
+      <y>91</y>
       <width>130</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -106,6 +140,23 @@
     </property>
     <property name="whatsThis">
      <string/>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
     </property>
     <property name="inputMethodHints">
      <set>Qt::ImhNone</set>
@@ -116,114 +167,10 @@
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
     </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>200</y>
-      <width>90</width>
-      <height>21</height>
-     </rect>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Confirm password</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>165</y>
-      <width>47</width>
-      <height>13</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Password</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>80</y>
-      <width>55</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Name</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_4">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>240</y>
-      <width>65</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Street</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_5">
-    <property name="geometry">
-     <rect>
-      <x>340</x>
-      <y>80</y>
-      <width>51</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
+    <property name="placeholderText">
      <string>Surname</string>
     </property>
    </widget>
@@ -231,9 +178,9 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>180</y>
+      <y>171</y>
       <width>281</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -248,6 +195,20 @@
     <property name="whatsThis">
      <string/>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
+    </property>
     <property name="inputMethodHints">
      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
     </property>
@@ -256,15 +217,18 @@
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Password</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="leConPassword">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>220</y>
+      <y>211</y>
       <width>281</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -279,6 +243,20 @@
     <property name="whatsThis">
      <string/>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
+    </property>
     <property name="inputMethodHints">
      <set>Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText|Qt::ImhSensitiveData</set>
     </property>
@@ -288,12 +266,15 @@
     <property name="echoMode">
      <enum>QLineEdit::Password</enum>
     </property>
+    <property name="placeholderText">
+     <string>Confirm password</string>
+    </property>
    </widget>
    <widget class="QLabel" name="label_6">
     <property name="geometry">
      <rect>
       <x>200</x>
-      <y>50</y>
+      <y>60</y>
       <width>101</width>
       <height>25</height>
      </rect>
@@ -306,6 +287,9 @@
       <bold>false</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(74, 74, 74)</string>
+    </property>
     <property name="text">
      <string>Registration</string>
     </property>
@@ -314,9 +298,9 @@
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>260</y>
+      <y>251</y>
       <width>281</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -331,6 +315,20 @@
     <property name="whatsThis">
      <string/>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
+    </property>
     <property name="inputMethodHints">
      <set>Qt::ImhNone</set>
     </property>
@@ -340,36 +338,17 @@
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_7">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>280</y>
-      <width>95</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
-     <string>Apartment number</string>
+    <property name="placeholderText">
+     <string>Street</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="leApartNum">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>300</y>
+      <y>291</y>
       <width>281</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -384,6 +363,20 @@
     <property name="whatsThis">
      <string/>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
+    </property>
     <property name="inputMethodHints">
      <set>Qt::ImhNone</set>
     </property>
@@ -392,15 +385,18 @@
     </property>
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
+    </property>
+    <property name="placeholderText">
+     <string>Apartment number</string>
     </property>
    </widget>
    <widget class="QLineEdit" name="leLogin">
     <property name="geometry">
      <rect>
       <x>110</x>
-      <y>140</y>
+      <y>131</y>
       <width>281</width>
-      <height>22</height>
+      <height>31</height>
      </rect>
     </property>
     <property name="font">
@@ -415,6 +411,20 @@
     <property name="whatsThis">
      <string/>
     </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit {
+background-color: rgb(238, 238, 238);
+  outline: 0;
+  border-bottom: 2px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-style: double;
+  border-bottom-color: #34495e;
+  height: 46px;
+  width: 300px;
+}</string>
+    </property>
     <property name="inputMethodHints">
      <set>Qt::ImhNone</set>
     </property>
@@ -424,26 +434,7 @@
     <property name="echoMode">
      <enum>QLineEdit::Normal</enum>
     </property>
-   </widget>
-   <widget class="QLabel" name="label_8">
-    <property name="geometry">
-     <rect>
-      <x>110</x>
-      <y>120</y>
-      <width>55</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="font">
-     <font>
-      <family>Times New Roman</family>
-      <pointsize>9</pointsize>
-      <weight>75</weight>
-      <italic>true</italic>
-      <bold>true</bold>
-     </font>
-    </property>
-    <property name="text">
+    <property name="placeholderText">
      <string>Login</string>
     </property>
    </widget>

@@ -11,12 +11,13 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 
 class Ui_RegisterWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(500, 440)
-        MainWindow.setMinimumSize(QtCore.QSize(500, 440))
-        MainWindow.setMaximumSize(QtCore.QSize(500, 440))
-        self.centralwidget = QtWidgets.QWidget(MainWindow)
+    def setupUi(self, Ui_Registration):
+        Ui_Registration.setObjectName("Ui_Registration")
+        Ui_Registration.resize(500, 440)
+        Ui_Registration.setMinimumSize(QtCore.QSize(500, 440))
+        Ui_Registration.setMaximumSize(QtCore.QSize(500, 440))
+        Ui_Registration.setStyleSheet("background-color: rgb(238, 238, 238);")
+        self.centralwidget = QtWidgets.QWidget(Ui_Registration)
         self.centralwidget.setMaximumSize(QtCore.QSize(540, 540))
         self.centralwidget.setObjectName("centralwidget")
         self.btnSingUpReg = QtWidgets.QPushButton(self.centralwidget)
@@ -25,185 +26,219 @@ class Ui_RegisterWindow(object):
         font.setFamily("Times New Roman")
         font.setPointSize(11)
         font.setBold(True)
-        font.setWeight(75)
+        font.setUnderline(False)
+        font.setWeight(87)
+        font.setStrikeOut(False)
         self.btnSingUpReg.setFont(font)
+        self.btnSingUpReg.setStyleSheet("QPushButton {\n"
+"  font-weight: 700;\n"
+"  color: white;\n"
+"  text-decoration: none;\n"
+"  padding: .2em 1em calc(.2em + 3px);\n"
+"  border-radius: .900em;\n"
+"  background: rgb(64,199,129);\n"
+"  box-shadow: 0 -3px rgb(53,167,110) inset;\n"
+"  transition: 0.2s;\n"
+"} \n"
+"QPushButton:hover { background: rgb(53, 167, 110); }\n"
+"QPushButton:pressed {\n"
+"  background: rgb(33,147,90);\n"
+"  box-shadow: 0 3px rgb(33,147,90) inset;\n"
+"}")
         self.btnSingUpReg.setObjectName("btnSingUpReg")
         self.leName = QtWidgets.QLineEdit(self.centralwidget)
-        self.leName.setGeometry(QtCore.QRect(110, 100, 130, 22))
+        self.leName.setGeometry(QtCore.QRect(110, 91, 130, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leName.setFont(font)
         self.leName.setToolTip("")
         self.leName.setWhatsThis("")
+        self.leName.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leName.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leName.setText("")
         self.leName.setObjectName("leName")
         self.leSurname = QtWidgets.QLineEdit(self.centralwidget)
-        self.leSurname.setGeometry(QtCore.QRect(260, 100, 130, 22))
+        self.leSurname.setGeometry(QtCore.QRect(260, 91, 130, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leSurname.setFont(font)
         self.leSurname.setToolTip("")
         self.leSurname.setWhatsThis("")
+        self.leSurname.setLayoutDirection(QtCore.Qt.LeftToRight)
+        self.leSurname.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leSurname.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leSurname.setText("")
         self.leSurname.setEchoMode(QtWidgets.QLineEdit.Normal)
+        self.leSurname.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.leSurname.setObjectName("leSurname")
-        self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(110, 200, 90, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label.setFont(font)
-        self.label.setObjectName("label")
-        self.label_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_2.setGeometry(QtCore.QRect(110, 165, 47, 13))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_2.setFont(font)
-        self.label_2.setObjectName("label_2")
-        self.label_3 = QtWidgets.QLabel(self.centralwidget)
-        self.label_3.setGeometry(QtCore.QRect(110, 80, 55, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_3.setFont(font)
-        self.label_3.setObjectName("label_3")
-        self.label_4 = QtWidgets.QLabel(self.centralwidget)
-        self.label_4.setGeometry(QtCore.QRect(110, 240, 65, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_4.setFont(font)
-        self.label_4.setObjectName("label_4")
-        self.label_5 = QtWidgets.QLabel(self.centralwidget)
-        self.label_5.setGeometry(QtCore.QRect(340, 80, 51, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_5.setFont(font)
-        self.label_5.setObjectName("label_5")
         self.lePassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.lePassword.setGeometry(QtCore.QRect(110, 180, 281, 22))
+        self.lePassword.setGeometry(QtCore.QRect(110, 171, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.lePassword.setFont(font)
         self.lePassword.setToolTip("")
         self.lePassword.setWhatsThis("")
+        self.lePassword.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.lePassword.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhNoAutoUppercase|QtCore.Qt.ImhNoPredictiveText|QtCore.Qt.ImhSensitiveData)
         self.lePassword.setText("")
         self.lePassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.lePassword.setObjectName("lePassword")
         self.leConPassword = QtWidgets.QLineEdit(self.centralwidget)
-        self.leConPassword.setGeometry(QtCore.QRect(110, 220, 281, 22))
+        self.leConPassword.setGeometry(QtCore.QRect(110, 211, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leConPassword.setFont(font)
         self.leConPassword.setToolTip("")
         self.leConPassword.setWhatsThis("")
+        self.leConPassword.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leConPassword.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhNoAutoUppercase|QtCore.Qt.ImhNoPredictiveText|QtCore.Qt.ImhSensitiveData)
         self.leConPassword.setText("")
         self.leConPassword.setEchoMode(QtWidgets.QLineEdit.Password)
         self.leConPassword.setObjectName("leConPassword")
         self.label_6 = QtWidgets.QLabel(self.centralwidget)
-        self.label_6.setGeometry(QtCore.QRect(200, 50, 101, 25))
+        self.label_6.setGeometry(QtCore.QRect(200, 60, 101, 25))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(16)
         font.setBold(False)
         font.setWeight(50)
         self.label_6.setFont(font)
+        self.label_6.setStyleSheet("color: rgb(74, 74, 74)")
         self.label_6.setObjectName("label_6")
         self.leAddress = QtWidgets.QLineEdit(self.centralwidget)
-        self.leAddress.setGeometry(QtCore.QRect(110, 260, 281, 22))
+        self.leAddress.setGeometry(QtCore.QRect(110, 251, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leAddress.setFont(font)
         self.leAddress.setToolTip("")
         self.leAddress.setWhatsThis("")
+        self.leAddress.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leAddress.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leAddress.setText("")
         self.leAddress.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.leAddress.setObjectName("leAddress")
-        self.label_7 = QtWidgets.QLabel(self.centralwidget)
-        self.label_7.setGeometry(QtCore.QRect(110, 280, 95, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_7.setFont(font)
-        self.label_7.setObjectName("label_7")
         self.leApartNum = QtWidgets.QLineEdit(self.centralwidget)
-        self.leApartNum.setGeometry(QtCore.QRect(110, 300, 281, 22))
+        self.leApartNum.setGeometry(QtCore.QRect(110, 291, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leApartNum.setFont(font)
         self.leApartNum.setToolTip("")
         self.leApartNum.setWhatsThis("")
+        self.leApartNum.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
         self.leApartNum.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leApartNum.setText("")
         self.leApartNum.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.leApartNum.setObjectName("leApartNum")
         self.leLogin = QtWidgets.QLineEdit(self.centralwidget)
-        self.leLogin.setGeometry(QtCore.QRect(110, 140, 281, 22))
+        self.leLogin.setGeometry(QtCore.QRect(110, 131, 281, 31))
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(12)
         self.leLogin.setFont(font)
         self.leLogin.setToolTip("")
         self.leLogin.setWhatsThis("")
-        self.leLogin.setInputMethodHints(QtCore.Qt.ImhHiddenText|QtCore.Qt.ImhNoAutoUppercase|QtCore.Qt.ImhNoPredictiveText|QtCore.Qt.ImhSensitiveData)
+        self.leLogin.setStyleSheet("QLineEdit {\n"
+"background-color: rgb(238, 238, 238);\n"
+"  outline: 0;\n"
+"  border-bottom: 2px;\n"
+"  border-top: 0;\n"
+"  border-left: 0;\n"
+"  border-right: 0;\n"
+"  border-bottom-style: double;\n"
+"  border-bottom-color: #34495e;\n"
+"  height: 46px;\n"
+"  width: 300px;\n"
+"}")
+        self.leLogin.setInputMethodHints(QtCore.Qt.ImhNone)
         self.leLogin.setText("")
         self.leLogin.setEchoMode(QtWidgets.QLineEdit.Normal)
         self.leLogin.setObjectName("leLogin")
-        self.label_8 = QtWidgets.QLabel(self.centralwidget)
-        self.label_8.setGeometry(QtCore.QRect(110, 120, 55, 21))
-        font = QtGui.QFont()
-        font.setFamily("Times New Roman")
-        font.setPointSize(9)
-        font.setBold(True)
-        font.setItalic(True)
-        font.setWeight(75)
-        self.label_8.setFont(font)
-        self.label_8.setObjectName("label_8")
-        MainWindow.setCentralWidget(self.centralwidget)
+        Ui_Registration.setCentralWidget(self.centralwidget)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Ui_Registration)
+        QtCore.QMetaObject.connectSlotsByName(Ui_Registration)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Ui_Registration):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Registration"))
-        self.btnSingUpReg.setText(_translate("MainWindow", "SIGN UP"))
-        self.label.setText(_translate("MainWindow", "Confirm password"))
-        self.label_2.setText(_translate("MainWindow", "Password"))
-        self.label_3.setText(_translate("MainWindow", "Name"))
-        self.label_4.setText(_translate("MainWindow", "Street"))
-        self.label_5.setText(_translate("MainWindow", "Surname"))
-        self.label_6.setText(_translate("MainWindow", "Registration"))
-        self.label_7.setText(_translate("MainWindow", "Apartment number"))
-        self.label_8.setText(_translate("MainWindow", "Login"))
+        Ui_Registration.setWindowTitle(_translate("Ui_Registration", "miniOSBB - Registration"))
+        self.btnSingUpReg.setText(_translate("Ui_Registration", "SIGN UP"))
+        self.leName.setPlaceholderText(_translate("Ui_Registration", "Name"))
+        self.leSurname.setPlaceholderText(_translate("Ui_Registration", "Surname"))
+        self.lePassword.setPlaceholderText(_translate("Ui_Registration", "Password"))
+        self.leConPassword.setPlaceholderText(_translate("Ui_Registration", "Confirm password"))
+        self.label_6.setText(_translate("Ui_Registration", "Registration"))
+        self.leAddress.setPlaceholderText(_translate("Ui_Registration", "Street"))
+        self.leApartNum.setPlaceholderText(_translate("Ui_Registration", "Apartment number"))
+        self.leLogin.setPlaceholderText(_translate("Ui_Registration", "Login"))

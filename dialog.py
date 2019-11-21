@@ -16,11 +16,32 @@ class Ui_Dialog(object):
         Dialog.resize(230, 80)
         Dialog.setMinimumSize(QtCore.QSize(230, 80))
         Dialog.setMaximumSize(QtCore.QSize(230, 80))
+        Dialog.setStyleSheet("background-color: rgb(238, 238, 238);")
         self.btnDialogOK = QtWidgets.QPushButton(Dialog)
-        self.btnDialogOK.setGeometry(QtCore.QRect(80, 40, 70, 20))
+        self.btnDialogOK.setGeometry(QtCore.QRect(80, 40, 70, 21))
+        self.btnDialogOK.setStyleSheet("QPushButton {\n"
+"  font-weight: 700;\n"
+"  color: white;\n"
+"  text-decoration: none;\n"
+"  padding: .2em 1em calc(.2em + 3px);\n"
+"  border-radius: .45em;\n"
+"  background: rgb(64,199,129);\n"
+"  box-shadow: 0 -3px rgb(53,167,110) inset;\n"
+"  transition: 0.2s;\n"
+"} \n"
+"QPushButton:hover { background: rgb(53, 167, 110); }\n"
+"QPushButton:pressed {\n"
+"  background: rgb(33,147,90);\n"
+"  box-shadow: 0 3px rgb(33,147,90) inset;\n"
+"}")
         self.btnDialogOK.setObjectName("btnDialogOK")
         self.label = QtWidgets.QLabel(Dialog)
-        self.label.setGeometry(QtCore.QRect(60, 20, 111, 16))
+        self.label.setGeometry(QtCore.QRect(50, 20, 131, 16))
+        font = QtGui.QFont()
+        font.setFamily("Times New Roman")
+        font.setPointSize(10)
+        self.label.setFont(font)
+        self.label.setStyleSheet("color: rgb(74, 74, 74)")
         self.label.setObjectName("label")
 
         self.retranslateUi(Dialog)
@@ -28,6 +49,6 @@ class Ui_Dialog(object):
 
     def retranslateUi(self, Dialog):
         _translate = QtCore.QCoreApplication.translate
-        Dialog.setWindowTitle(_translate("Dialog", "Dialog"))
+        Dialog.setWindowTitle(_translate("Dialog", "Message"))
         self.btnDialogOK.setText(_translate("Dialog", "ОК"))
         self.label.setText(_translate("Dialog", "Registration successful"))
